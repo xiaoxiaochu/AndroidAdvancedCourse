@@ -1,15 +1,11 @@
 package com.go.compiler;
 
-import com.go.library.AutoParcel;
 import com.go.library.ZyaoAnnotation;
 import com.google.auto.service.AutoService;
 
 import java.io.IOException;
 import java.io.Writer;
-import java.lang.annotation.Annotation;
-import java.util.Collection;
 import java.util.LinkedHashSet;
-import java.util.List;
 import java.util.Set;
 
 import javax.annotation.processing.AbstractProcessor;
@@ -18,7 +14,6 @@ import javax.annotation.processing.Messager;
 import javax.annotation.processing.ProcessingEnvironment;
 import javax.annotation.processing.Processor;
 import javax.annotation.processing.RoundEnvironment;
-import javax.annotation.processing.SupportedAnnotationTypes;
 import javax.lang.model.SourceVersion;
 import javax.lang.model.element.Element;
 import javax.lang.model.element.ElementKind;
