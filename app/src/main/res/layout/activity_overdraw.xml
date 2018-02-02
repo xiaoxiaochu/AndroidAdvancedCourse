@@ -37,7 +37,7 @@
         android:id="@+id/view3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="156dp"
         android:background="@color/medium_gray"
         android:text="@string/view3"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"

@@ -8,15 +8,21 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.go.android.course.fragment.DateFragment;
 import com.go.android.course.fragment.SimpleFragment;
+import com.go.library.ZyaoAnnotation;
 
+
+@ZyaoAnnotation(
+        name = "Chu",
+        text = "Hello !!! Welcome "
+)
 public class MainActivity extends AppCompatActivity  implements SimpleFragment.OnFragmentInteractionListener{
 
     FragmentManager fragmentManager;
 
 
     private Button mButton;
+
     private boolean isFragmentDisplayed = false;
 
 
@@ -116,4 +122,9 @@ public class MainActivity extends AppCompatActivity  implements SimpleFragment.O
         Toast.makeText(this, "Choice is " + Integer.toString(choice),
                 Toast.LENGTH_SHORT).show();
     }
+
+
+    
 }
+
+
