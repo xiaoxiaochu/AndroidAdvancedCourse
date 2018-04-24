@@ -12,6 +12,8 @@ import android.widget.Toast;
 import com.go.android.course.communication.CommunicationMainActivity;
 import com.go.android.course.overdraw.GpuOverdrawAtivity;
 
+import com.go.android.course.swipemenu.SwipeActivity;
+import com.go.android.course.swipemenu.SwipeMenuActivity;
 import com.go.library.Chu$$Chu;
 import com.go.library.ZyaoAnnotation;
 
@@ -41,6 +43,10 @@ public class NewMainActivity extends AppCompatActivity implements OnClickListene
     @BindView(R.id.btn_youtube)
     public Button btn_youtube;
 
+    @BindView(R.id.btn_swipe)
+    public Button btn_swipe;
+
+
     Chu$$Chu chu$$Chu;
 
     @Override
@@ -60,7 +66,7 @@ public class NewMainActivity extends AppCompatActivity implements OnClickListene
         btn_drag.setOnClickListener(this);
         btn_main.setOnClickListener(this);
         btn_overdraw.setOnClickListener(this);
-
+        btn_swipe.setOnClickListener(this);
 
 
 
@@ -86,6 +92,10 @@ public class NewMainActivity extends AppCompatActivity implements OnClickListene
             case R.id.btn_youtube:
                 Intent intentYoutube = new Intent(NewMainActivity.this, YouTubeActivity.class);
                 startActivity(intentYoutube);
+                break;
+            case R.id.btn_swipe:
+                Intent swipe = new Intent(NewMainActivity.this, SwipeActivity.class);
+                startActivity(swipe);
                 break;
 
         }

@@ -60,6 +60,9 @@
         <activity android:name=".overdraw.GpuOverdrawAtivity"/>
 
         <activity android:name=".sensor.MotionAndPositionActivity"/>
+        <activity android:name=".swipemenu.SwipeActivity"/>
+        <activity android:name=".swipemenu.SwipeMenuActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
 
         <service android:name=".myaidl.AidlService"
             android:exported="true">

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View"/>
+        <import type="java.util.List"/>
+        <import type="com.go.mvvmdemo.databinding.User"/>
+
+        <!-- 变量user， 描述了一个布局中会用到的属性 -->
+        <variable name="user" type="User"/>
+        <variable name="userList" type="List&lt;User&gt;"/>
+        <variable name="handlers" type="com.go.mvvmdemo.databinding.EvenListener"/>
+
+        <variable
+            name="task"
+            type="com.go.mvvmdemo.databinding.Task"/>
+        <variable
+            name="presenter"
+            type="com.go.mvvmdemo.databinding.Presenter"/>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.firstName}"
+            android:visibility="@{task.mIsTask ? View.VISIBLE : View.GONE}"/>
+
+        <!-- 布局文件中的表达式使用 “@{}” 的语法 -->
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.lastName}"
+            android:onClick="@{handlers::onclick}"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{task.mData}"
+            android:onClick="@{(view) -> presenter.onSaveClick(view, task) }"/>
+
+        <Button
+            android:id="@+id/btn_change"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="button" />
+    </LinearLayout>
+</layout>
